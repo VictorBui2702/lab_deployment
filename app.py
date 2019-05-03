@@ -16,8 +16,10 @@ from uservisit import UserVisit
 
 @app.route('/')
 def home():
-    u = UserVisit.query.get(1)
-    return 'hello world! {} '.format(u.id)
+    u=UserVisit(name='Charles')
+    db.session.add(u)
+    db.session.commit()
+    return 'hello world! {} '.format(u.name)
 
 migrate = Migrate(app,db) 
 
