@@ -1,4 +1,4 @@
-from src import db
+from app import db
 from datetime import datetime
 
 class UserVisit(db.Model):

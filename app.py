@@ -14,4 +14,10 @@ app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
+from uservisit import UserVisit
+
 migrate = Migrate(app,db) 
+
+
+if __name__ == '__main__':  
+    app.run()
