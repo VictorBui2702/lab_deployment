@@ -16,8 +16,8 @@ from uservisit import UserVisit
 
 @app.route('/')
 def home():
-    users = UserVisit.query.all()
-    return 'hello world! {} '.format(users[-1].age)
+    users = UserVisit.query.count()
+    return 'hello world! u are user number {} '.format(users)
 
 migrate = Migrate(app,db) 
 
