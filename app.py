@@ -16,6 +16,9 @@ from uservisit import UserVisit
 
 @app.route('/')
 def home():
+    u = UserVisit
+    db.session.add(u)
+    db.session.commit()
     users = UserVisit.query.count()
     return 'hello world! u are user number {} '.format(users)
 
